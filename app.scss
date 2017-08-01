@@ -1,0 +1,245 @@
+// Variables
+$black : #202020;
+$purple: #B97CFC;
+$white: #fff;
+$pink: #F93B69;
+$dark-grey:#808080;
+$light-grey: #d9d9d9;
+$green: #B0E8E2;
+$orange: #EB8B6E;
+
+.container{
+  //largeur max
+  max-width: 350px;
+  // Longueur max
+  max-height: 630px;
+  // Le contenu est rogné s'il n'est pas dans le container
+  overflow: hidden;
+  // taille de marge extérieure
+  margin: 30px auto 0;
+  // couleur de fond
+  background-color: #eee;
+  // ombre
+  box-shadow: 0 0 40px lighten($black,50);
+  // Style de police
+  font-family: 'Open Sans',sans-serif;
+}
+
+
+
+.navbar{
+  // couleur de fond
+  background: $purple;
+  // couleur du texte
+  color: $white;
+  // marge intérieur(t,r,b,l)
+  padding: 1em 0.5em;
+  a{
+    // couleur du texte
+    color: $white;
+    // décorer le texte
+    text-decoration: none;
+    // taille du lien
+    font-size: 1.3em;
+    // deplacement vers la gauche
+    float: left;
+  }
+  span{
+    // taille de l'écriture dans le span
+    font-size: 1.1em;
+    // grosseur de l'écriture
+    font-weight: 300;
+    // affichage avec saut a la ligne avant et apres
+    display: block;
+    // alignement du texte
+    text-align: center;
+  }
+}
+
+
+.profil-pic{
+  // largeur de la div
+  width: 30px;
+  // hauteur de la div
+  height: 30px;
+  // affichage
+  display: inline-block;
+  // On le deplace du flux normal
+  float: right;
+  // position non fixée
+  position: relative;
+  img{
+    // largeur auto de l'image
+    width: 100%;
+    // permet de faire un cercle autour de l'image
+    border-radius: 50%;
+  }
+}
+
+.notification{
+  // position fixée par rapport à certain éléments
+  position: absolute;
+  // largeur
+  width: 5px;
+  // hauteur
+  height: 5px;
+  // permet de faire un cercle
+  border-radius: 50%;
+  // couleur de fond
+  background: $pink;
+  // déplacement vers le haut
+  top:2px;
+  // deplacement vers la droite
+  right: 2px;
+}
+
+.header{
+  // image de fond de fond
+  background: url(https://unsplash.it/1080/720?image=1011);
+  // image s'adapte a la div
+  background-size: cover;
+  // couleur du texte
+  color : $white;
+  // position non fixée
+  position: relative;
+}
+
+
+.color-overlay{
+  // marges intérieures
+  padding: 3em 2em;
+  // empeche le padding et bordure d'augmenter
+  box-sizing: border-box;
+  // couleur de fond
+  background: rgba(123,94,155,0.5);
+}
+
+.actionbutton{
+  // position fixée
+  position: absolute;
+  // couleur de fond
+  background: $pink;
+  // permet de faire un cercle
+  border-radius: 50%;
+  // largeur
+  width: 50px;
+  // hauteur
+  height: 50px;
+  // taille du texte
+  font-size: 3em;
+  // epaisseur du texte
+  font-weight: 300;
+  // boite flexible
+  display: flex;
+  // éléments groupés au centre
+  justify-content: center;
+  // regroupé au centre
+  align-items: center;
+  // mettre en bas
+  bottom: -25px;
+  // droite
+  right: 20px;
+  // ombre
+  box-shadow: 0 0 8px #202020;
+}
+
+.day-number{
+  // taille de la police
+  font-size: 4em;
+  // affichage
+  display: inline-block;
+  // marges extérieures
+  margin-right: 15px;
+}
+
+.date-right{
+  // affichage
+  display:inline-block;
+}
+
+.day-name{
+  // taille de police
+  font-size: 1.6em;
+}
+
+.month{
+  // gestion des lettres capitales , tout est en capital
+  text-transform: uppercase;
+  // (100 - 900) épaisseur d'un texte
+  font-weight: 300;
+  // taille du texte em = px/16
+  font-size: 0.6em;
+  // l'interlettre
+  letter-spacing: 2px;
+  // marges extérieures
+  margin-top: 2px;
+}
+
+
+.timeline{
+  ul{
+    // retire le style par defaut de la liste
+    list-style: none;
+    position: relative;
+    padding: 1em 0 0 2em;
+    margin: 0;
+    // crée un trait vertical
+    &::before{
+      content: ' ';
+      height: 100%;
+      width: 1px;
+      background-color: $light-grey;
+      position: absolute;
+      top: 0;
+      left: 2.5em;
+      z-index: -1;
+    }
+  }
+  li div{
+    display: inline-block;
+    margin: 1em 0;
+    vertical-align: top;
+  }
+  .bullet{
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: $white;
+    z-index: 1;
+    margin-right: 1em;
+    &.pink{
+      border: 2px solid $pink;
+    }
+    &.green{
+      border: 2px solid $green;
+    }
+    &.orange{
+      border: 2px solid $orange;
+    }
+  }
+  .time{
+    width: 20%;
+    font-size: 0.75em;
+    padding-top: 0.25em;
+  }
+  .desc{
+    width: 50%;
+  }
+  h3{
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+  }
+  h4{
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: $dark-grey;
+  }
+  .people img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
