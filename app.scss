@@ -18,7 +18,7 @@ $orange: #EB8B6E;
   // taille de marge extérieure
   margin: 30px auto 0;
   // couleur de fond
-  background-color: #eee;
+//  background-color: #eee;
   // ombre
   box-shadow: 0 0 40px lighten($black,50);
   // Style de police
@@ -238,8 +238,11 @@ $orange: #EB8B6E;
     color: $dark-grey;
   }
   .people img{
+    // largeur
     width: 30px;
+    // hauteur
     height: 30px;
+    // permet de faire un cercle
     border-radius: 50%;
   }
 }
